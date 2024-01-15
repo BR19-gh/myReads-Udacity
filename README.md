@@ -1,6 +1,6 @@
 # MyReads Project
 
-The MyReads project is a bookshelf app that empowers users to categorize books into different shelves: "Currently Reading," "Want to Read," and "Read." Users can effortlessly search for books and seamlessly organize them into their desired shelves.
+The MyReads project (part of Udacity React Nanodegree) is a bookshelf app that empowers users to categorize books into different shelves: "Currently Reading," "Want to Read," and "Read." Users can effortlessly search for books and seamlessly organize them into their desired shelves.
 
 ## Installation
 
@@ -32,7 +32,7 @@ The app should now be running on http://localhost:3000. Open this URL in your we
 
 Once the app is running, you will be greeted by the main page showcasing your bookshelves. Effortlessly move books between shelves by using the dropdown menu on each book and selecting the desired shelf.
 
-To explore and add new books to your collection, click on the search icon in the top right corner of the page. Enter a search query in the search bar and press Enter. The search results will be displayed below, and you can add books to your shelves by selecting the desired shelf from the dropdown menu on each book.
+To explore and add new books to your collection, click on the plus icon in the bottom right corner of the page. Enter a search query in the search bar. The search results will be displayed below, and you can add books to your shelves by selecting the desired shelf from the dropdown menu on each book.
 
 ## Contributing
 
