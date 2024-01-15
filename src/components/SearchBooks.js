@@ -3,7 +3,7 @@ import BookSlot from "./BookSlot";
 import { search } from "../BooksAPI";
 import { useEffect, useState } from "react";
 
-const SearchBooks = ({ changeShelf }) => {
+const SearchBooks = ({ books, changeShelf }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [textIfNoResult, setTextIfNoResult] = useState("No Results Found");
 
@@ -22,6 +22,17 @@ const SearchBooks = ({ changeShelf }) => {
     } else {
       setSearchResults([]);
     }
+  };
+
+  const mergeResultsWithBooks = () => {
+    return searchResults.map((searchBook) => {
+      const existingBook = books.find((book) => book.id === searchBook.id);
+      if (existingBook) {
+        return { ...searchBook, shelf: existingBook.shelf };
+      } else {
+        return searchBook;
+      }
+    });
   };
 
   return (
@@ -49,7 +60,7 @@ const SearchBooks = ({ changeShelf }) => {
           searchResults === "" ? (
             <p>{textIfNoResult}</p>
           ) : (
-            searchResults.map((book) => (
+            mergeResultsWithBooks().map((book) => (
               <BookSlot changeShelf={changeShelf} key={book.id} book={book} />
             ))
           )}

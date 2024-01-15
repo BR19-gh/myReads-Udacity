@@ -7,7 +7,7 @@ const BookSlot = ({ book, changeShelf }) => {
   const handleDetailsClick = () => {
     setIsModalOpen(true);
   };
-
+  console.log(book);
   return (
     <div className="book">
       <div className="book-top">
@@ -19,7 +19,7 @@ const BookSlot = ({ book, changeShelf }) => {
             backgroundImage: `url(${
               book.imageLinks && book.imageLinks.thumbnail
                 ? book.imageLinks.thumbnail
-                : "https://lgimages.s3.amazonaws.com/nc-sm.gif"
+                : "https://books.google.com/books/content?id=1yx1tgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
             })`,
           }}
         ></div>

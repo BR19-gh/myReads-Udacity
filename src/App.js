@@ -14,7 +14,6 @@ function App() {
     update(book, shelf).then(() => {
       getAll().then((books) => {
         const booksCopy = [...books];
-        const bookIndex = booksCopy.findIndex((b) => b.id === book.id);
 
         setBooks(booksCopy);
       });
@@ -42,7 +41,7 @@ function App() {
       />
       <Route
         path="/search"
-        element={<SearchBooks changeShelf={changeShelf} />}
+        element={<SearchBooks books={books} changeShelf={changeShelf} />}
       />
     </Routes>
   );
