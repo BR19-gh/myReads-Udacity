@@ -13,9 +13,7 @@ function App() {
   const changeShelf = (book, shelf) => {
     update(book, shelf).then(() => {
       getAll().then((books) => {
-        const booksCopy = [...books];
-
-        setBooks(booksCopy);
+        setBooks([...books]);
       });
     });
   };
